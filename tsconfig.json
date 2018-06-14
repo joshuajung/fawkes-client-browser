@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "target": "ES6",
+    "module": "commonjs",
+    "baseUrl": ".",
+    "moduleResolution": "node",
+    "noEmitOnError": true,
+    "noUnusedLocals": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "pretty": true,
+    "removeComments": true,
+    "declaration": true,
+    "jsx": "react",
+    "outDir": "build/",
+    "sourceMap": true,
+    "inlineSourceMap": false
+  },
+  "include": ["src/**/*"]
+}

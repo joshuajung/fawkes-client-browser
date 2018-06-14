@@ -1,0 +1,23 @@
+@import "~bulma/bulma";
+
+section {
+  @extend .section;
+}
+
+h1 {
+  @extend .title;
+}
+
+h2 {
+  @extend .subtitle;
+}
+
+.is-full-width {
+  width: 100% !important;
+}
+
+@import "./alert-center.scss";
+@import "./header.scss";
+@import "./advanced-table.scss";
+@import "./advanced-form.scss";
+@import "./advanced-record-details.scss";

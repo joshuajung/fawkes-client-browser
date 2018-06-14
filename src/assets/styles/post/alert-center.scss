@@ -1,0 +1,25 @@
+div.alert-center {
+  @extend .container;
+  position: fixed;
+  left: 1.5rem;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  section {
+    @extend .is-paddingless;
+    article.alert {
+      @extend .message;
+      @extend .is-small;
+      margin-bottom: 1rem;
+      div.alert-title {
+        @extend .message-header;
+        button.alert-dismiss {
+          @extend .delete;
+          @extend .is-small;
+        }
+      }
+      div.alert-body {
+        @extend .message-body;
+      }
+    }
+  }
+}

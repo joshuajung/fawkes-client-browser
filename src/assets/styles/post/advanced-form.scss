@@ -1,0 +1,23 @@
+.advanced-form {
+  input:not([type="checkbox"]) {
+    @extend .input;
+  }
+  textarea {
+    @extend .textarea;
+  }
+  label.checkbox {
+    .label {
+      margin-left: 0.5rem;
+      float: right;
+    }
+  }
+  button {
+    @extend .button;
+  }
+  :valid {
+    @extend .is-success;
+  }
+  .columns {
+    margin-bottom: 0 !important;
+  }
+}

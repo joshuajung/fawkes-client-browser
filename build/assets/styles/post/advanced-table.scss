@@ -1,0 +1,44 @@
+.advanced-table {
+  table {
+    @extend .table;
+    @extend .is-fullwidth;
+    @extend .is-hoverable;
+    th {
+      white-space: nowrap;
+      &.sortable {
+        cursor: pointer;
+      }
+      .sort-indicator {
+        margin-left: 0.5rem;
+        @extend .has-text-primary;
+      }
+    }
+    td {
+      vertical-align: middle !important;
+    }
+    td.integer,
+    td.float {
+      text-align: right;
+    }
+    td.boolean {
+      text-align: center;
+    }
+  }
+  .pagination {
+    button {
+      @extend .button;
+      &.is-current {
+        @extend .is-primary;
+      }
+    }
+  }
+  .filters {
+    margin-bottom: 1.5rem;
+    div.select {
+      @extend .is-fullwidth;
+    }
+    button.remove-filter {
+      @extend .is-outlined;
+    }
+  }
+}

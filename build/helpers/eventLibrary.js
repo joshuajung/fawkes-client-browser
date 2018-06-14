@@ -1,0 +1,34 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var EventType;
+(function (EventType) {
+    EventType["AdvancedFormArrayElementAdded"] = "AdvancedFormArrayElementAdded";
+    EventType["AdvancedFormArrayElementRemoved"] = "AdvancedFormArrayElementRemoved";
+    EventType["AdvancedFormFieldChanged"] = "AdvancedFormFieldChanged";
+    EventType["AdvancedFormFieldRegistered"] = "AdvancedFormFieldRegistered";
+    EventType["AdvancedFormFieldUnregistered"] = "AdvancedFormFieldUnregistered";
+    EventType["AdvancedFormRegistered"] = "AdvancedFormRegistered";
+    EventType["AdvancedFormUnregistered"] = "AdvancedFormUnregistered";
+    EventType["AdvancedTableFilterPanelToggled"] = "AdvancedTableFilterPanelToggled";
+    EventType["AdvancedRecordListLoadRequestEnded"] = "AdvancedRecordListLoadRequestEnded";
+    EventType["AdvancedRecordListLoadRequestStarted"] = "AdvancedRecordListLoadRequestStarted";
+    EventType["AdvancedRecordDetailsSelectRequestEnded"] = "AdvancedRecordDetailsSelectRequestEnded";
+    EventType["AdvancedRecordDetailsSelectRequestStarted"] = "AdvancedRecordDetailsSelectRequestStarted";
+    EventType["AdvancedRecordDetailsUpdateRequestEnded"] = "AdvancedRecordDetailsUpdateRequestEnded";
+    EventType["AdvancedRecordDetailsUpdateRequestStarted"] = "AdvancedRecordDetailsUpdateRequestStarted";
+    EventType["AlertDismissed"] = "AlertDismissed";
+    EventType["AlertPresented"] = "AlertPresented";
+    EventType["LanguageChanged"] = "LanguageChanged";
+    EventType["RegisterRequestStarted"] = "RegisterRequestStarted";
+    EventType["RegisterRequestEnded"] = "RegisterRequestEnded";
+    EventType["LogInRequestEnded"] = "LogInRequestEnded";
+    EventType["LogInRequestStarted"] = "LogInRequestStarted";
+    EventType["LogOutRequestEnded"] = "LogOutRequestEnded";
+    EventType["LogOutRequestStarted"] = "LogOutRequestStarted";
+    EventType["NavbarBurgerToggled"] = "NavbarBurgerToggled";
+    EventType["PersistRehydrate"] = "persist/REHYDRATE";
+    EventType["MiscApiRequestStarted"] = "MiscApiRequestStarted";
+    EventType["MiscApiRequestEnded"] = "MiscApiRequestEnded";
+    EventType["Unknown"] = "Unknown";
+})(EventType = exports.EventType || (exports.EventType = {}));
+//# sourceMappingURL=eventLibrary.js.map

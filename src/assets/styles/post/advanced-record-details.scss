@@ -1,0 +1,6 @@
+.advanced-record-details {
+  .looked-up-by-at {
+    @extend .box;
+    margin-top: $gap;
+  }
+}
