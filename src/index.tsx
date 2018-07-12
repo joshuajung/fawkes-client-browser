@@ -14,6 +14,7 @@ import { lookup, GenericLanguageSelector } from "./helpers/localization"
 import * as apiActions from "./actions/api"
 import * as eventLibrary from "./helpers/eventLibrary"
 import loadIcons from "./helpers/icons"
+import * as stateTools from "./helpers/stateTools"
 
 // ## Components
 import AdvancedForm from "./components/reusable/advancedForm/advancedForm"
@@ -77,5 +78,6 @@ export {
   render,
   Route,
   ThunkCall,
-  Title
+  Title,
+  stateTools
 }
