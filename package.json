@@ -1,6 +1,6 @@
 {
   "name": "fawkes-client-browser",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "The Fawkes browser client.",
   "main": "build/index.js",
   "types": "build/index.d.ts",
