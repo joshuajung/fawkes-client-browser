@@ -25,6 +25,7 @@ import AdvancedRecordDetails from "./components/reusable/advancedRecordDetails/a
 import NavbarItem from "./components/private/header/navbarItem";
 import Title from "./components/reusable/title";
 import Button from "./components/reusable/button";
+import Icon from "./components/reusable/icon";
 declare const initialize: () => void;
 declare const render: (m: Module) => void | Element | React.Component<any, React.ComponentState, any>;
-export { AdvancedDataSpan, advancedFormActions, AdvancedForm, AdvancedFormArray, AdvancedFormCheckbox, AdvancedFormField, AdvancedFormInput, AdvancedFormInputReadonly, AdvancedFormSelect, AdvancedFormSubmitButton, AdvancedFormTextarea, AdvancedRecordDetails, AdvancedTable, apiActions, ApiConfig, Button, combineReducers, componentEnhancer, eventLibrary, GenericLanguageSelector, initialize, lookup, Module, NavbarItem, React, render, Route, ThunkCall, Title, stateTools };
+export { AdvancedDataSpan, advancedFormActions, AdvancedForm, AdvancedFormArray, AdvancedFormCheckbox, AdvancedFormField, AdvancedFormInput, AdvancedFormInputReadonly, AdvancedFormSelect, AdvancedFormSubmitButton, AdvancedFormTextarea, AdvancedRecordDetails, AdvancedTable, apiActions, ApiConfig, Button, combineReducers, componentEnhancer, eventLibrary, GenericLanguageSelector, initialize, lookup, Module, NavbarItem, React, render, Route, ThunkCall, Title, stateTools, Icon };

@@ -34,6 +34,7 @@ import NavbarItem from "./components/private/header/navbarItem"
 import Root from "./components/root"
 import Title from "./components/reusable/title"
 import Button from "./components/reusable/button"
+import Icon from "./components/reusable/icon"
 
 const initialize = () => {
   loadIcons()
@@ -83,5 +84,6 @@ export {
   Route,
   ThunkCall,
   Title,
-  stateTools
+  stateTools,
+  Icon
 }

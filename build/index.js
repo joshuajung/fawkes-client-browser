@@ -53,6 +53,8 @@ const title_1 = require("./components/reusable/title");
 exports.Title = title_1.default;
 const button_1 = require("./components/reusable/button");
 exports.Button = button_1.default;
+const icon_1 = require("./components/reusable/icon");
+exports.Icon = icon_1.default;
 const initialize = () => {
     icons_1.default();
 };
