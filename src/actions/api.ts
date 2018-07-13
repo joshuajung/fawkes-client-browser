@@ -32,7 +32,7 @@ export const request = (
     requestFailedAlertMessage?: LanguageSelector
     requestSuccessfulRedirectPath?: (result: any) => string
     willStartRequest?: (getState: GetState) => boolean
-    requestSuccessfulSideEffect?: () => any
+    requestSuccessfulSideEffect?: (result: any) => any
     resultModifier?: (any) => any
     payload?: any
     history?: any
@@ -110,7 +110,7 @@ export const request = (
         }
       }
       if (options.requestSuccessfulSideEffect) {
-        options.requestSuccessfulSideEffect()
+        options.requestSuccessfulSideEffect(parsedResult)
       }
       if (options.requestSuccessfulRedirectPath && options.history) {
         const redirectTarget = options.requestSuccessfulRedirectPath(

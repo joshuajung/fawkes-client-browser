@@ -12,6 +12,7 @@ import Module, { ApiConfig } from "./helpers/moduleInterface"
 import { ThunkCall } from "./helpers/middlewareTypes"
 import { lookup, GenericLanguageSelector } from "./helpers/localization"
 import * as apiActions from "./actions/api"
+import * as advancedFormActions from "./actions/advancedForm"
 import * as eventLibrary from "./helpers/eventLibrary"
 import loadIcons from "./helpers/icons"
 import * as stateTools from "./helpers/stateTools"
@@ -32,6 +33,7 @@ import AdvancedRecordDetails from "./components/reusable/advancedRecordDetails/a
 import NavbarItem from "./components/private/header/navbarItem"
 import Root from "./components/root"
 import Title from "./components/reusable/title"
+import Button from "./components/reusable/button"
 
 const initialize = () => {
   loadIcons()
@@ -53,6 +55,7 @@ const render = (m: Module) => {
 
 export {
   AdvancedDataSpan,
+  advancedFormActions,
   AdvancedForm,
   AdvancedFormArray,
   AdvancedFormCheckbox,
@@ -66,6 +69,7 @@ export {
   AdvancedTable,
   apiActions,
   ApiConfig,
+  Button,
   combineReducers,
   componentEnhancer,
   eventLibrary,

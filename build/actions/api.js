@@ -54,7 +54,7 @@ exports.request = (path, apiConfig, options) => (dispatch, getState) => {
             alert = Object.assign({}, alert, { dismissed: true });
         }
         if (options.requestSuccessfulSideEffect) {
-            options.requestSuccessfulSideEffect();
+            options.requestSuccessfulSideEffect(parsedResult);
         }
         if (options.requestSuccessfulRedirectPath && options.history) {
             const redirectTarget = options.requestSuccessfulRedirectPath(parsedResult);

@@ -13,7 +13,7 @@ export declare const request: (path: string, apiConfig: ApiConfig, options: {
     requestFailedAlertMessage?: (language: Language) => string | JSX.Element;
     requestSuccessfulRedirectPath?: (result: any) => string;
     willStartRequest?: (getState: GetState) => boolean;
-    requestSuccessfulSideEffect?: () => any;
+    requestSuccessfulSideEffect?: (result: any) => any;
     resultModifier?: (any: any) => any;
     payload?: any;
     history?: any;
