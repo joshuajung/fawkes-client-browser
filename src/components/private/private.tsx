@@ -28,28 +28,36 @@ class Private extends React.Component<
                 path={"/" + ao.objectName + "/list"}
                 exact={true}
                 key={"route-at-" + ao.objectName}
-              >
-                <AdvancedTable advancedObject={ao} module={this.props.module} />
-              </Route>
+                render={() => (
+                  <AdvancedTable
+                    advancedObject={ao}
+                    module={this.props.module}
+                  />
+                )}
+              />
             ))}
             {this.props.module.advancedObjects.map(ao => (
               <Route
                 path={"/" + ao.objectName + "/record/:id?"}
                 exact={true}
                 key={"route-ard-" + ao.objectName}
-              >
-                <AdvancedRecordDetails
-                  advancedObject={ao}
-                  module={this.props.module}
-                />
-              </Route>
+                render={() => (
+                  <AdvancedRecordDetails
+                    advancedObject={ao}
+                    module={this.props.module}
+                  />
+                )}
+              />
             ))}
             {this.props.module.customRoutes.map((cr, crIndex) => (
               <Route
                 path={cr.path}
                 exact={true}
-                component={cr.component}
                 key={"route-custom-" + crIndex}
+                render={() => {
+                  const Component = cr.component as any
+                  return <Component module={this.props.module} />
+                }}
               />
             ))}
           </div>

@@ -12,11 +12,12 @@ class Private extends React.Component {
             React.createElement(header_1.default, { module: this.props.module }),
             React.createElement("section", null,
                 React.createElement("div", { className: "container" },
-                    this.props.module.advancedObjects.map(ao => (React.createElement(react_router_dom_1.Route, { path: "/" + ao.objectName + "/list", exact: true, key: "route-at-" + ao.objectName },
-                        React.createElement(advancedTable_1.default, { advancedObject: ao, module: this.props.module })))),
-                    this.props.module.advancedObjects.map(ao => (React.createElement(react_router_dom_1.Route, { path: "/" + ao.objectName + "/record/:id?", exact: true, key: "route-ard-" + ao.objectName },
-                        React.createElement(advancedRecordDetails_1.default, { advancedObject: ao, module: this.props.module })))),
-                    this.props.module.customRoutes.map((cr, crIndex) => (React.createElement(react_router_dom_1.Route, { path: cr.path, exact: true, component: cr.component, key: "route-custom-" + crIndex })))))));
+                    this.props.module.advancedObjects.map(ao => (React.createElement(react_router_dom_1.Route, { path: "/" + ao.objectName + "/list", exact: true, key: "route-at-" + ao.objectName, render: () => (React.createElement(advancedTable_1.default, { advancedObject: ao, module: this.props.module })) }))),
+                    this.props.module.advancedObjects.map(ao => (React.createElement(react_router_dom_1.Route, { path: "/" + ao.objectName + "/record/:id?", exact: true, key: "route-ard-" + ao.objectName, render: () => (React.createElement(advancedRecordDetails_1.default, { advancedObject: ao, module: this.props.module })) }))),
+                    this.props.module.customRoutes.map((cr, crIndex) => (React.createElement(react_router_dom_1.Route, { path: cr.path, exact: true, key: "route-custom-" + crIndex, render: () => {
+                            const Component = cr.component;
+                            return React.createElement(Component, { module: this.props.module });
+                        } })))))));
     }
 }
 const stateMappings = (s, props) => ({});

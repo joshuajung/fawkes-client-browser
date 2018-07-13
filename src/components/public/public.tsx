@@ -23,21 +23,33 @@ class Public extends React.Component<
     return (
       <section>
         <div className="container">
-          <Route path={"/"} exact={true}>
-            <LoginForm module={this.props.module} />
-          </Route>
-          <Route path={"/register"} exact={true}>
-            <RegistrationForm module={this.props.module} />
-          </Route>
-          <Route path={"/forgotPassword"} exact={true}>
-            <ForgotPasswordForm module={this.props.module} />
-          </Route>
-          <Route path={"/resetPasswordWithToken/:token"} exact={true}>
-            <ResetPasswordWithTokenForm module={this.props.module} />
-          </Route>
-          <Route path={"/logInWithToken/:token"} exact={true}>
-            <LogInWithTokenPage module={this.props.module} />
-          </Route>
+          <Route
+            path={"/"}
+            exact={true}
+            render={() => <LoginForm module={this.props.module} />}
+          />
+          <Route
+            path={"/register"}
+            exact={true}
+            render={() => <RegistrationForm module={this.props.module} />}
+          />
+          <Route
+            path={"/forgotPassword"}
+            exact={true}
+            render={() => <ForgotPasswordForm module={this.props.module} />}
+          />
+          <Route
+            path={"/resetPasswordWithToken/:token"}
+            exact={true}
+            render={() => (
+              <ResetPasswordWithTokenForm module={this.props.module} />
+            )}
+          />
+          <Route
+            path={"/logInWithToken/:token"}
+            exact={true}
+            render={() => <LogInWithTokenPage module={this.props.module} />}
+          />
         </div>
       </section>
     )
