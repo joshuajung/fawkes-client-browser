@@ -1,12 +1,13 @@
 {
   "name": "fawkes-client-browser",
-  "version": "0.2.8",
+  "version": "0.2.15",
   "description": "The Fawkes browser client.",
   "main": "build/index.js",
   "types": "build/index.d.ts",
   "scripts": {
     "build": "./scripts/build.sh",
-    "build-mon": "./scripts/build-mon.sh"
+    "build-mon": "./scripts/build-mon.sh",
+    "prepare": "./scripts/build.sh"
   },
   "repository": {
     "type": "git",
@@ -49,6 +50,5 @@
     "ts-jest": "^22.4.6",
     "typescript": "^2.8.3",
     "validator": "^10.2.0"
-  },
-  "devDependencies": {}
+  }
 }

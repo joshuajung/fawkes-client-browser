@@ -1,5 +1,5 @@
 // External imports
-import { Varchar } from "fawkes-server/build/support"
+import { Varchar, cryptoHelper } from "fawkes-server/build/support"
 
 // Internal imports
 import * as el from "../helpers/eventLibrary"
@@ -43,6 +43,23 @@ export const logInWithToken = (
     requestSuccessfulAlertMessage: l => l.loginForm.alert.loginSuccessful(),
     requestFailedAlertMessage: l => l.loginForm.alert.loginFailed(),
     requestSuccessfulRedirectPath: result => "/",
+    history: history
+  })
+export const logInWithAppleIdentifier = (
+  apiConfig: ApiConfig,
+  history: any
+): ThunkCall =>
+  apiActions.request("/user/createOrLogInWithAppleIdentifier", apiConfig, {
+    method: "POST",
+    requestStartedActionType: el.EventType.LogInRequestStarted,
+    requestEndedActionType: el.EventType.LogInRequestEnded,
+    body: {
+      appleIdentifier: cryptoHelper.createGuid()
+    },
+    /*requestStartedAlertMessage: l => l.loginForm.alert.loggingIn(),
+        requestSuccessfulAlertMessage: l => l.loginForm.alert.loginSuccessful(),
+        requestFailedAlertMessage: l => l.loginForm.alert.loginFailed(),
+    requestSuccessfulRedirectPath: result => "/",*/
     history: history
   })
 export const register = (

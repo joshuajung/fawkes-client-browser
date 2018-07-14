@@ -20,7 +20,9 @@ class Private extends React.Component<
   render() {
     return (
       <div>
-        <Header module={this.props.module} />
+        {this.props.module.hideHeader ? null : (
+          <Header module={this.props.module} />
+        )}
         <section>
           <div className="container">
             {this.props.module.advancedObjects.map(ao => (

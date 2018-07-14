@@ -12,10 +12,12 @@ export default interface Module {
   reducer?: Reducer<{}>
   brand: ComponentType
   navbarItems: Array<ComponentType>
+  hideHeader: boolean
   customRoutes?: Array<{ path: string; component: ComponentType }>
   customRootComponent?: ComponentType<any>
   advancedObjects: Array<advancedObjectHelper.AdvancedObject>
   api: ApiConfig
+  autoLoginWithAppleIdentifier: boolean
 }
 
 export interface ApiConfig {

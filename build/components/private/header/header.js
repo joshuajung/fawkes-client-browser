@@ -18,13 +18,12 @@ class Header extends React.Component {
                     React.createElement("div", { className: "navbar-start" },
                         this.props.module.advancedObjects.map((advancedObject, index) => (React.createElement(navbarItem_1.default, { key: "ao-" + index, title: advancedObject.getTitlePlural(this.props.language, true), href: "/" + advancedObject.objectName + "/list" }))),
                         this.props.module.navbarItems.map((ModuleNavbarItem, index) => (React.createElement(ModuleNavbarItem, { key: index })))),
-                    React.createElement("div", { className: "navbar-end" },
-                        React.createElement(navbarItem_1.default, { title: this.props.userEmail, items: [
-                                {
-                                    title: this.props.cl(l => l.private.navbar.logOut()),
-                                    onClick: this.props.logOut
-                                }
-                            ] }))))));
+                    React.createElement("div", { className: "navbar-end" }, this.props.module.autoLoginWithAppleIdentifier ? null : (React.createElement(navbarItem_1.default, { title: this.props.userEmail, items: [
+                            {
+                                title: this.props.cl(l => l.private.navbar.logOut()),
+                                onClick: this.props.logOut
+                            }
+                        ] })))))));
     }
 }
 const stateMappings = (s, props) => ({

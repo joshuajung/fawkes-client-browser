@@ -55,15 +55,17 @@ class Header extends React.Component<
               ))}
             </div>
             <div className="navbar-end">
-              <NavbarItem
-                title={this.props.userEmail}
-                items={[
-                  {
-                    title: this.props.cl(l => l.private.navbar.logOut()),
-                    onClick: this.props.logOut
-                  }
-                ]}
-              />
+              {this.props.module.autoLoginWithAppleIdentifier ? null : (
+                <NavbarItem
+                  title={this.props.userEmail}
+                  items={[
+                    {
+                      title: this.props.cl(l => l.private.navbar.logOut()),
+                      onClick: this.props.logOut
+                    }
+                  ]}
+                />
+              )}
             </div>
           </div>
         </nav>

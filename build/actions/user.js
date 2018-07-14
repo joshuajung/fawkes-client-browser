@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+const support_1 = require("fawkes-server/build/support");
 const el = require("../helpers/eventLibrary");
 const apiActions = require("./api");
 exports.logInWithEmail = (apiConfig, email, password, history) => apiActions.request("/user/logInWithEmail", apiConfig, {
@@ -27,6 +28,15 @@ exports.logInWithToken = (apiConfig, loginToken, history) => apiActions.request(
     requestSuccessfulAlertMessage: l => l.loginForm.alert.loginSuccessful(),
     requestFailedAlertMessage: l => l.loginForm.alert.loginFailed(),
     requestSuccessfulRedirectPath: result => "/",
+    history: history
+});
+exports.logInWithAppleIdentifier = (apiConfig, history) => apiActions.request("/user/createOrLogInWithAppleIdentifier", apiConfig, {
+    method: "POST",
+    requestStartedActionType: el.EventType.LogInRequestStarted,
+    requestEndedActionType: el.EventType.LogInRequestEnded,
+    body: {
+        appleIdentifier: support_1.cryptoHelper.createGuid()
+    },
     history: history
 });
 exports.register = (apiConfig, email, password, history) => apiActions.request("/user/createWithEmail", apiConfig, {

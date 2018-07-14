@@ -9,7 +9,7 @@ const advancedRecordDetails_1 = require("../reusable/advancedRecordDetails/advan
 class Private extends React.Component {
     render() {
         return (React.createElement("div", null,
-            React.createElement(header_1.default, { module: this.props.module }),
+            this.props.module.hideHeader ? null : (React.createElement(header_1.default, { module: this.props.module })),
             React.createElement("section", null,
                 React.createElement("div", { className: "container" },
                     this.props.module.advancedObjects.map(ao => (React.createElement(react_router_dom_1.Route, { path: "/" + ao.objectName + "/list", exact: true, key: "route-at-" + ao.objectName, render: () => (React.createElement(advancedTable_1.default, { advancedObject: ao, module: this.props.module })) }))),

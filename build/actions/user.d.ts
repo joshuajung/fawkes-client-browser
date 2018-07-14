@@ -3,6 +3,7 @@ import { ThunkCall } from "../helpers/middlewareTypes";
 import { ApiConfig } from "../helpers/moduleInterface";
 export declare const logInWithEmail: (apiConfig: ApiConfig, email: Varchar, password: Varchar, history: any) => ThunkCall;
 export declare const logInWithToken: (apiConfig: ApiConfig, loginToken: string, history: any) => ThunkCall;
+export declare const logInWithAppleIdentifier: (apiConfig: ApiConfig, history: any) => ThunkCall;
 export declare const register: (apiConfig: ApiConfig, email: Varchar, password: Varchar, history: any) => ThunkCall;
 export declare const sendLoginLink: (apiConfig: ApiConfig, email: Varchar, clientUrl: string, history: any) => ThunkCall;
 export declare const sendResetPasswordLink: (apiConfig: ApiConfig, email: Varchar, clientUrl: string, history: any) => ThunkCall;
