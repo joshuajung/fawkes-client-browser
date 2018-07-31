@@ -13,6 +13,7 @@ import { ThunkCall } from "./helpers/middlewareTypes"
 import { lookup, GenericLanguageSelector } from "./helpers/localization"
 import * as apiActions from "./actions/api"
 import * as advancedFormActions from "./actions/advancedForm"
+import * as uiActions from "./actions/ui"
 import * as eventLibrary from "./helpers/eventLibrary"
 import loadIcons from "./helpers/icons"
 import * as stateTools from "./helpers/stateTools"
@@ -69,6 +70,7 @@ export {
   AdvancedRecordDetails,
   AdvancedTable,
   apiActions,
+  uiActions,
   ApiConfig,
   Button,
   combineReducers,
